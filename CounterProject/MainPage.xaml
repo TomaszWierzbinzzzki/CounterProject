@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CounterProject.MainPage">
+    <VerticalStackLayout Margin="15" Spacing="10">
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button Text="Dodaj nowy licznik" Clicked="buttonAddCounter" />
+            <Button Text="Wyczyść dane" Clicked="buttonClearData" />
+        </HorizontalStackLayout>
+
+        <Entry x:Name="inputEntry" Placeholder="Wprowadź liczbę" Keyboard="Numeric" Focused="onInputFocus" />
+        <Label x:Name="errorMessageLabel" TextColor="Red" IsVisible="False" />
+
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="countersStack" Spacing="10" />
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>
